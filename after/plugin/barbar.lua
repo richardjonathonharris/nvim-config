@@ -20,7 +20,6 @@ require'barbar'.setup {
   icons = {
     -- Configure the base icons on the bufferline.
     -- Valid options to display the buffer index and -number are `true`, 'superscript' and 'subscript'
-    buffer_index = true,
     -- Enables / disables diagnostic symbols
     diagnostics = {
       [vim.diagnostic.severity.ERROR] = {enabled = true, icon = 'ﬀ'},
@@ -98,3 +97,11 @@ require'barbar'.setup {
   -- where X is the buffer number. But only a static string is accepted here.
   no_name_title = nil,
 }
+
+local map = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = false }
+
+map('n', '<C-,>', '<Cmd>BufferPrevious<CR>', opts)
+map('n', '<C-.>', '<Cmd>BufferNext<CR>', opts)
+map('n', '<C-c>', '<Cmd>BufferClose<CR>', opts)
+map('n', '<C-y>', '<Cmd>BufferPick<CR>', opts)
