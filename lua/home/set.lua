@@ -36,3 +36,6 @@ vim.opt.cursorline = true
 vim.api.nvim_set_option("clipboard", "unnamed")
 
 vim.opt.mouse = ""
+
+vim.o.timeout = true
+vim.o.timeoutlen = 500
