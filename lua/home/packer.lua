@@ -56,5 +56,6 @@ use {
 use { 'nvim-tree/nvim-web-devicons' }
 use { 'lewis6991/gitsigns.nvim' }
 use { 'romgrk/barbar.nvim' }
+use { 'terrortylor/nvim-comment' }
 
 end)
