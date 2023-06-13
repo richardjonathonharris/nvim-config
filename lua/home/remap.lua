@@ -36,3 +36,5 @@ vim.keymap.set("n", "<leader>f", function()
     vim.lsp.buf.format()
 end)
 
+vim.keymap.set("n", "<C-(>", "<cmd>Scratch<cr>")
+vim.keymap.set("n", "<C-{>", "<cmd>ScratchOpen<cr>")

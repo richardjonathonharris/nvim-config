@@ -39,3 +39,10 @@ vim.opt.mouse = ""
 
 vim.o.timeout = true
 vim.o.timeoutlen = 500
+
+-- search settings
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
+-- include dash in D movements
+vim.opt.iskeyword:append("-")

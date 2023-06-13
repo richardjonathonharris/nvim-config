@@ -58,5 +58,16 @@ use { 'lewis6991/gitsigns.nvim' }
 use { 'romgrk/barbar.nvim' }
 use { 'terrortylor/nvim-comment' }
 use { 'folke/which-key.nvim' }
+use { 'jose-elias-alvarez/null-ls.nvim' }
+use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+}
+
+use { 'LintaoAmons/scratch.nvim' }
+use({
+    "kylechui/nvim-surround",
+    tag = "*",
+})
 
 end)
