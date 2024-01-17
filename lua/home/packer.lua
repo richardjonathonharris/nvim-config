@@ -69,5 +69,6 @@ use({
     "kylechui/nvim-surround",
     tag = "*",
 })
+use { 'simrat39/rust-tools.nvim' }
 
 end)
