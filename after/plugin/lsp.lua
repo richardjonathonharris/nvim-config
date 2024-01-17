@@ -11,6 +11,7 @@ lsp.ensure_installed({
     'sqlls',
     'marksman',
     'jedi_language_server',
+    'rust_analyzer',
 })
 
 local cmp = require('cmp')
@@ -52,7 +53,7 @@ lsp.format_mapping('gq', {
         timeout_ms = 10000,
     },
     servers = {
-        ['null-ls'] = { 'javascript', 'typescript', 'lua', 'python' },
+        ['null-ls'] = { 'javascript', 'typescript', 'lua', 'python', 'rust' },
     }
 })
 
