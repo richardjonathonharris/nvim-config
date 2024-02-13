@@ -12,6 +12,8 @@ lsp.ensure_installed({
     'marksman',
     'jedi_language_server',
     'rust_analyzer',
+    'rubocop',
+    'solargraph'
 })
 
 local cmp = require('cmp')
