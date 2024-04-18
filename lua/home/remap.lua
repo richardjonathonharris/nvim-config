@@ -38,3 +38,5 @@ end)
 
 vim.keymap.set("n", "<C-(>", "<cmd>Scratch<cr>")
 vim.keymap.set("n", "<C-{>", "<cmd>ScratchOpen<cr>")
+
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
