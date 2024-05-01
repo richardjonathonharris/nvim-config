@@ -70,5 +70,6 @@ use({
     tag = "*",
 })
 use { 'simrat39/rust-tools.nvim' }
+use { 'lukas-reineke/indent-blankline.nvim' }
 
 end)
