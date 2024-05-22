@@ -1,5 +1,4 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Lets you use J and K in visual mode to move lines up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

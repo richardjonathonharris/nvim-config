@@ -72,6 +72,5 @@ use({
 use { 'simrat39/rust-tools.nvim' }
 use { 'lukas-reineke/indent-blankline.nvim' }
 use { 'NvChad/nvim-colorizer.lua' }
-use { 'nvim-tree/nvim-tree.lua' }
-
+use { 'stevearc/oil.nvim' }
 end)
