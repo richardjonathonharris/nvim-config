@@ -1,11 +1,21 @@
-local mark = require("harpoon.mark")
-local ui = require("harpoon.ui")
+local harpoon = require("harpoon")
+harpoon:setup()
 
-vim.keymap.set("n", "<leader>a", mark.add_file)
-vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
+vim.keymap.set('n', '<leader>a', function() harpoon:list():add() end)
+vim.keymap.set('n', '<C-t>', function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+vim.keymap.set('n', '<C-q>', function() harpoon:list():select(1) end)
+vim.keymap.set('n', '<C-w>', function() harpoon:list():select(2) end)
+vim.keymap.set('n', '<C-e>', function() harpoon:list():select(3) end)
+vim.keymap.set('n', '<C-r>', function() harpoon:list():select(4) end)
 
-vim.keymap.set("n", "<C-&>", function() ui.nav_file(1) end)
-vim.keymap.set("n", "<C-*>", function() ui.nav_file(2) end)
-vim.keymap.set("n", "<C-(>", function() ui.nav_file(3) end)
-vim.keymap.set("n", "<C-)>", function() ui.nav_file(4) end)
+harpoon:extend({
+    UI_CREATE = function(cx)
+        vim.keymap.set('n', '<C-v>', function()
+            harpoon.ui:select_menu_item({ vsplit = true })
+        end, { buffer = cx.bufnr })
 
+        vim.keymap.set('n', '<C-s>', function()
+            harpoon.ui:select_menu_item({ split = true })
+        end, { buffer = cx.bufnr })
+    end,
+})

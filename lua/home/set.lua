@@ -46,3 +46,9 @@ vim.opt.smartcase = true
 
 -- include dash in D movements
 vim.opt.iskeyword:append("-")
+
+-- open vsplits to right
+vim.opt.splitright = true
+
+-- open hsplits to below
+vim.opt.splitbelow = true
